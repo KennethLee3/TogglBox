@@ -1,50 +1,46 @@
-Toggl Button Box
+# Toggl Button Box
 
-A physical 5-button Raspberry Pi–powered controller to start/stop Toggl Track timers with LEDs indicating the active timer. Designed for productivity and hands-free time tracking.
+A physical 5-button Raspberry Pi–powered controller to start/stop Toggl Track timers with LEDs indicating the active timer. Designed for productivity through visual time tracking.
 
 This project uses:
 
-Raspberry Pi (any model with GPIO)
+- Raspberry Pi (any model with GPIO)
 
-5 momentary pushbuttons
+- 5 momentary pushbuttons
 
-5 LEDs
+- 5 LEDs
 
-Toggl Track API v9
+- Toggl Track API v9
 
-Python + RPi.GPIO
 
-systemd for automatic startup
+## Features
 
-✨ Features
+- Press a button → starts a Toggl timer
 
-Press a button → starts a Toggl timer
+- Press the same button again → stops that timer
 
-Press the same button again → stops that timer
+- LEDs show which timer is running
 
-LEDs show which timer is running
+- Syncs every 10 seconds with Toggl
 
-Syncs every 10 seconds with Toggl
+- If a timer is started on another device, the correct LED lights
 
-If a timer is started on another device, the correct LED lights
+- Fully offline-safe (will queue actions until network returns)
 
-Fully offline-safe (will queue actions until network returns)
+- Runs automatically on boot via systemd
 
-Runs automatically on boot via systemd
+- Fully open source and easy to modify
 
-Fully open source and easy to modify
+## Hardware Requirements
 
-🛠 Hardware Requirements
+- Raspberry Pi (Zero, 1, 2, 3, 4 — all supported)
 
-Raspberry Pi (Zero, 1, 2, 3, 4 — all supported)
+- 5x momentary push buttons
 
-5x momentary push buttons
+- 5x LEDs
 
-5x LEDs
+- 5x 220–330 Ω resistors
 
-5x 220–330 Ω resistors
-
-Breadboard or custom PCB
 
 Jumper wires
 
