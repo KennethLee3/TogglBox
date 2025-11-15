@@ -35,8 +35,10 @@ TODO: Wiring diagram
 
 Clone the repo onto the Raspberry Pi:
 ```
+mkdir toggle-box
+cd toggl-box/
 git clone https://github.com/KennethLee3/TogglBox.git
-cd toggl-box
+cd TogglBox/
 ```
 
 Install Python dependencies:
