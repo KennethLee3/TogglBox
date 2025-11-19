@@ -16,7 +16,7 @@ if not API_TOKEN or not WORKSPACE_ID:
     raise RuntimeError("Environment variables not set: TOGGL_API_TOKEN or TOGGL_WORKSPACE_ID")
 
 # Button–LED pairs (5 buttons, 5 LEDs), BCM numbering
-BUTTON_PINS = [4, 14, 15, 17, 18]
+BUTTON_PINS = [4, 14, 15, 17, 1]
 LED_PINS    = [21, 22, 23, 24, 25]
 
 # Track the running entry for each button
