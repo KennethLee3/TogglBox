@@ -11,7 +11,7 @@ from config import BUTTON_PINS, LED_PINS, TIMER_CONFIG, SYNC_INTERVAL#, BUZZER_P
 # -----------------------------
 NUM_TIMERS = len(TIMER_CONFIG)
 running_entries = [None] * NUM_TIMERS
-start_timestamps = [None] * NUM_TIMERS 
+start_timestamps = [None] * NUM_TIMERS
 
 API_TOKEN = os.getenv("TOGGL_API_TOKEN")
 WORKSPACE_ID = os.getenv("TOGGL_WORKSPACE_ID")
@@ -119,6 +119,8 @@ def start_timer(index):
         print(f"STARTED: {config['description']}")
     else:
         print(f"START ERROR: {resp.text}")
+        print(API_TOKEN)
+        print(WORKSPACE_ID)
 
 def stop_timer(index):
     global running_entries, start_timestamps
@@ -155,9 +157,6 @@ def main():
                         while not GPIO.input(pin):
                             time.sleep(0.05)
                             
-                else:
-                    print(f"Pin {i} is high.")
-
             # Handle the beep
             #handle_buzzer_pattern()
 
