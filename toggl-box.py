@@ -146,8 +146,13 @@ def main():
                 if not GPIO.input(pin):
                     time.sleep(0.05)
                     if not GPIO.input(pin):
-                        # Logic for start/stop (omitted for brevity, same as previous)
-                        pass 
+                        if running_entries[i] is None:
+                            start_timer(i)
+                        else:
+                            stop_timer(i)
+                        # Wait for release
+                        while not GPIO.input(pin):
+                            time.sleep(0.05)
 
             # Handle the beep
             #handle_buzzer_pattern()
