@@ -4,7 +4,7 @@ import base64
 import time
 import os
 from datetime import datetime, timezone
-from config import BUTTON_PINS, LED_PINS, TIMER_CONFIG, SYNC_INTERVAL, BUZZER_PIN
+from config import BUTTON_PINS, LED_PINS, TIMER_CONFIG, SYNC_INTERVAL#, BUZZER_PIN
 
 # -----------------------------
 # SETUP & STATE
