@@ -32,24 +32,24 @@ for pin in BUTTON_PINS:
 # CORE FUNCTIONS
 # -----------------------------
 
-def handle_buzzer_pattern():
-    """Creates a beeping pattern if a timer is overdue."""
-    is_overdue = False
-    for i in range(NUM_TIMERS):
-        if start_timestamps[i]:
-            limit = TIMER_CONFIG[i].get("max_minutes")
-            if limit and (time.time() - start_timestamps[i] > limit * 60):
-                is_overdue = True
-                break
-    
-    if is_overdue:
-        # Simple beep pattern: 0.5s on, 0.5s off
-        if int(time.time() * 2) % 2 == 0:
-            buzzer_pwm.start(50) # 50% duty cycle = Sound ON
-        else:
-            buzzer_pwm.stop()    # Sound OFF
-    else:
-        buzzer_pwm.stop()
+#def handle_buzzer_pattern():
+#    """Creates a beeping pattern if a timer is overdue."""
+#    is_overdue = False
+#    for i in range(NUM_TIMERS):
+#        if start_timestamps[i]:
+#            limit = TIMER_CONFIG[i].get("max_minutes")
+#            if limit and (time.time() - start_timestamps[i] > limit * 60):
+#                is_overdue = True
+#                break
+#    
+#    if is_overdue:
+#        # Simple beep pattern: 0.5s on, 0.5s off
+#        if int(time.time() * 2) % 2 == 0:
+#            buzzer_pwm.start(50) # 50% duty cycle = Sound ON
+#        else:
+#            buzzer_pwm.stop()    # Sound OFF
+#    else:
+#        buzzer_pwm.stop()
 
 def parse_toggl_time(time_str):
     """Converts Toggl's UTC string to a local Unix timestamp."""
