@@ -14,4 +14,4 @@ TIMER_CONFIG = [
     {"description": "Break", "max_minutes": 10, "project_id": None, "tags": ["rest"]}
 ]
 
-SYNC_INTERVAL = 10
+SYNC_INTERVAL = 60
