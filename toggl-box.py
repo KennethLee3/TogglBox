@@ -41,7 +41,7 @@ def handle_buzzer_pattern():
     for i in range(NUM_TIMERS):
         if start_timestamps[i]:
             limit = TIMER_CONFIG[i].get("max_minutes")
-            if limit and (time.time() - start_timestamps[i] > limit * 60):
+            if limit and (time.time() - int(start_timestamps[i]) > limit * 60):
                 is_overdue = True
                 break
     
