@@ -3,12 +3,15 @@ import requests
 import base64
 import time
 import os
+from dotenv import load_dotenv
 from datetime import datetime, timezone
 from config import BUTTON_PINS, LED_PINS, TIMER_CONFIG, SYNC_INTERVAL#, BUZZER_PIN
 
 # -----------------------------
 # SETUP & STATE
 # -----------------------------
+load_dotenv()
+
 NUM_TIMERS = len(TIMER_CONFIG)
 running_entries = [None] * NUM_TIMERS
 start_timestamps = [None] * NUM_TIMERS
