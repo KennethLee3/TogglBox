@@ -58,10 +58,11 @@ def parse_toggl_time(time_str):
     """Converts Toggl's UTC string to a local Unix timestamp."""
     # Toggl returns "2025-12-19T15:30:00Z"
     print(f"Time String: {time_str}")
+    dt = time_str.replace("Z", "+00:00")
+    print(f"Date Time: {dt}")
+    return dt
 #    dt = datetime.strptime(time_str.replace("Z", "+00:00"), "%Y-%m-%dT%H:%M:%SZ")
     dt = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%SZ")
-    print(f"Date Time: {dt}")
-    print(f"Return: {dt.replace(tzinfo=timezone.utc).timestamp()}")
     return dt.replace(tzinfo=timezone.utc).timestamp()
 
 def sync_from_toggl():
