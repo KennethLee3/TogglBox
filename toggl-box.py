@@ -17,7 +17,7 @@ running_entries = [None] * NUM_TIMERS
 start_timestamps = [None] * NUM_TIMERS
 
 API_TOKEN = os.getenv("TOGGL_API_TOKEN")
-WORKSPACE_ID = os.getenv("TOGGL_WORKSPACE_ID")
+WORKSPACE_ID = int(os.getenv("TOGGL_WORKSPACE_ID"))
 auth_header = "Basic " + base64.b64encode(f"{API_TOKEN}:api_token".encode()).decode()
 headers = {"Authorization": auth_header, "Content-Type": "application/json"}
 
