@@ -64,7 +64,9 @@ def sync_from_toggl():
     global running_entries, start_timestamps
     try:
         resp = requests.get("https://api.track.toggl.com/api/v9/me/time_entries/current", headers=headers)
-        if resp.status_code != 200: return
+        if resp.status_code != 200:
+            print(f"SYNC ERROR: status code {resp.status_code}")
+            return
         
         data = resp.json()
         # Reset local state
@@ -87,7 +89,7 @@ def sync_from_toggl():
 
         running_entries, start_timestamps = new_running, new_starts
     except Exception as e:
-        print(f"Sync error: {e}")
+        print(f"SYNC ERROR: {e}")
 
 def start_timer(index):
     global running_entries, start_timestamps
