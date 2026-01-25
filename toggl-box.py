@@ -19,9 +19,8 @@ auth_header = "Basic " + base64.b64encode(f"{API_TOKEN}:api_token".encode()).dec
 headers = {"Authorization": auth_header, "Content-Type": "application/json"}
 
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(BUZZER_PIN, GPIO.OUT)
-# Initialize PWM for passive buzzer: 2500Hz is a standard "beep" frequency
-buzzer_pwm = GPIO.PWM(BUZZER_PIN, 2500) 
+#GPIO.setup(BUZZER_PIN, GPIO.OUT)
+#buzzer_pwm = GPIO.PWM(BUZZER_PIN, 2500)
 
 for pin in LED_PINS:
     GPIO.setup(pin, GPIO.OUT)
@@ -100,7 +99,7 @@ def main():
                         pass 
 
             # Handle the beep
-            handle_buzzer_pattern()
+            #handle_buzzer_pattern()
 
             # Sync logic
             if time.time() - last_sync > SYNC_INTERVAL:
@@ -111,7 +110,7 @@ def main():
     except KeyboardInterrupt:
         pass
     finally:
-        buzzer_pwm.stop()
+        #buzzer_pwm.stop()
         GPIO.cleanup()
 
 if __name__ == "__main__":
