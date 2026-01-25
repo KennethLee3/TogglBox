@@ -10,7 +10,7 @@ from config import BUTTON_PINS, LED_PINS, TIMER_CONFIG, SYNC_INTERVAL#, BUZZER_P
 # -----------------------------
 # SETUP & STATE
 # -----------------------------
-load_dotenv()
+load_dotenv(override=True)
 
 NUM_TIMERS = len(TIMER_CONFIG)
 running_entries = [None] * NUM_TIMERS
