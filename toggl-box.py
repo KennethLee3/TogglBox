@@ -137,7 +137,7 @@ def stop_timer(index):
         running_entries[index] = None
         start_timestamps[index] = None
         GPIO.output(LED_PINS[index], GPIO.LOW)
-        buzzer_pwm.stop() # Kill buzzer if it was beeping
+        #buzzer_pwm.stop() # Kill buzzer if it was beeping
         print(f"STOPPED: {TIMER_CONFIG[index]['description']}")
     else:
         print(f"STOP ERROR: {resp.text}")
