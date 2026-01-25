@@ -144,6 +144,7 @@ def main():
             # Check buttons
             for i, pin in enumerate(BUTTON_PINS):
                 if not GPIO.input(pin):
+                    print(f"Pin {i} brought low.")
                     time.sleep(0.05)
                     if not GPIO.input(pin):
                         if running_entries[i] is None:
