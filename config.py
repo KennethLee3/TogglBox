@@ -1,10 +1,10 @@
 # config.py
 
 # --- GPIO Pin Configuration ---
-#BUTTON_PINS = [4, 14, 15, 17, 18]
-BUTTON_PINS = [4]
-#LED_PINS    = [22, 23, 24, 25, 27]
-LED_PINS    = [22]
+BUTTON_PINS = [4, 14, 15, 17, 18]
+#BUTTON_PINS = [4]
+LED_PINS    = [22, 23, 24, 25, 27]
+#LED_PINS    = [22]
 #BUZZER_PIN  = 11
 
 # --- Timer Properties ---
