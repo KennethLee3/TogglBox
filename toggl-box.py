@@ -61,9 +61,8 @@ def parse_toggl_time(time_str):
     dt = time_str.replace("Z", "+00:00")
     print(f"Date Time: {dt}")
     return dt
-#    dt = datetime.strptime(time_str.replace("Z", "+00:00"), "%Y-%m-%dT%H:%M:%SZ")
-    dt = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%SZ")
-    return dt.replace(tzinfo=timezone.utc).timestamp()
+#    dt = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%SZ")
+#    return dt.replace(tzinfo=timezone.utc).timestamp()
 
 def sync_from_toggl():
     global running_entries, start_timestamps
