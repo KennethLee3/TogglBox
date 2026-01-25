@@ -80,8 +80,10 @@ def sync_from_toggl():
                     GPIO.output(LED_PINS[i], GPIO.HIGH)
                 else:
                     GPIO.output(LED_PINS[i], GPIO.LOW)
+            print(f"SYNC: Found running timer '{data.get('description')}'")
         else:
             for pin in LED_PINS: GPIO.output(pin, GPIO.LOW)
+            print("SYNC: No timer currently running on Toggl.")
 
         running_entries, start_timestamps = new_running, new_starts
     except Exception as e:
