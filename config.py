@@ -14,4 +14,4 @@ TIMER_CONFIG = [
     {"description": "YouTube", "max_minutes": 45, "project_id": 207953438, "tags": None}
 ]
 
-SYNC_INTERVAL = 10
+SYNC_INTERVAL = 150
