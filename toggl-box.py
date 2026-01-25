@@ -144,7 +144,7 @@ def main():
             # Check buttons
             for i, pin in enumerate(BUTTON_PINS):
                 if not GPIO.input(pin):
-                    print(f"Pin {i} brought low.")
+                    print(f"Pin {i} is low.")
                     time.sleep(0.05)
                     if not GPIO.input(pin):
                         if running_entries[i] is None:
@@ -154,6 +154,9 @@ def main():
                         # Wait for release
                         while not GPIO.input(pin):
                             time.sleep(0.05)
+                            
+                else:
+                    print(f"Pin {i} is high.")
 
             # Handle the beep
             #handle_buzzer_pattern()
