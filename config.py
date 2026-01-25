@@ -7,11 +7,11 @@ BUTTON_PINS = [22, 23, 24, 25, 27]
 
 # --- Timer Properties ---
 TIMER_CONFIG = [
-    {"description": "Deep Work", "max_minutes": 60, "project_id": None, "tags": ["code"]},
-    {"description": "Admin/Email", "max_minutes": 20, "project_id": None, "tags": ["admin"]},
-    {"description": "Learning", "max_minutes": 45, "project_id": None, "tags": ["edu"]},
-    {"description": "Meetings", "max_minutes": 30, "project_id": None, "tags": ["social"]},
-    {"description": "Break", "max_minutes": 10, "project_id": None, "tags": ["rest"]}
+    {"description": "Devotions & Prayer", "max_minutes": 90, "project_id": 207953510, "tags": None},
+    {"description": "Schoolhouse Electronics", "max_minutes": 600, "project_id": 192753565, "tags": None},
+    {"description": "EMPTY", "max_minutes": 10, "project_id": None, "tags": ["3"]},
+    {"description": "EMPTY", "max_minutes": 10, "project_id": None, "tags": ["4"]},
+    {"description": "YouTube", "max_minutes": 45, "project_id": 207953438, "tags": None}
 ]
 
-SYNC_INTERVAL = 60
+SYNC_INTERVAL = 10
