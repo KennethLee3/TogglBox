@@ -39,9 +39,9 @@ def handle_buzzer_pattern():
     """Creates a beeping pattern if a timer is overdue."""
     is_overdue = False
     for i in range(NUM_TIMERS):
-        if start_timestamps[i]:
+        if start_timestamps[i] is not None:
             limit = TIMER_CONFIG[i].get("max_minutes")
-            if limit and (time.time() - int(start_timestamps[i]) > limit * 60):
+            if limit and (time.time() - float(start_timestamps[i]) > limit * 60):
                 is_overdue = True
                 break
     
