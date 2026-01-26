@@ -4,9 +4,9 @@ import time
 # --- CONFIGURATION ---
 BUZZER_PIN = 11  # BCM 11 (Physical Pin 23)
 STEP_DELAY = 1 # How long to stay on each frequency (seconds)
-START_FREQ = 500
-END_FREQ   = 5000
-STEP_SIZE  = 100
+START_FREQ = 3500
+END_FREQ   = 4500
+STEP_SIZE  = 50
 
 # --- SETUP ---
 GPIO.setmode(GPIO.BCM)
