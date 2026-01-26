@@ -2,8 +2,8 @@
 
 # --- GPIO Pin Configuration ---
 LED_PINS    = [4, 14, 15, 17, 18]
-BUTTON_PINS = [21, 22, 23, 24, 25]
-BUZZER_PIN  = 11
+BUTTON_PINS = [21, 24, 23, 22, 25]
+#BUZZER_PIN  = 11                       # Placed red error light on this pin instead.
 
 # --- Timer Properties ---
 TIMER_CONFIG = [
