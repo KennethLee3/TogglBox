@@ -23,7 +23,7 @@ headers = {"Authorization": auth_header, "Content-Type": "application/json"}
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(BUZZER_PIN, GPIO.OUT)
-buzzer_pwm = GPIO.PWM(BUZZER_PIN, 2500)
+buzzer_pwm = GPIO.PWM(BUZZER_PIN, 4400)
 
 for pin in LED_PINS:
     GPIO.setup(pin, GPIO.OUT)
