@@ -60,7 +60,8 @@ def parse_toggl_time(time_str):
     print(f"Time String: {time_str}")
     dt = time_str.replace("Z", "+00:00")
     print(f"Date Time: {dt}")
-    return dt
+    return datetime.fromisoformat(dt).timestamp()
+#    return dt
 #    dt = datetime.strptime(time_str, "%Y-%m-%dT%H:%M:%SZ")
 #    return dt.replace(tzinfo=timezone.utc).timestamp()
 
